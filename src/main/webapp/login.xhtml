@@ -1,21 +1,23 @@
 <html xmlns="http://www.w3.org/1999/xhtml"
 	xmlns:f="http://java.sun.com/jsf/core"
-	xmlns:h="http://java.sun.com/jsf/html">
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:p="http://primefaces.org/ui">
 
 <h:head>
+
 </h:head>
 
 
 <h:body>
-	<h:form>
+	<h:form id="formLogin">
 		<h:panelGrid columns="2">
 			<h:outputLabel value="Usuario: "></h:outputLabel>
-			<h:inputText value=""></h:inputText>
+			<h:inputText value="#{coneccion.usuario}"></h:inputText>
 			
 			<h:outputLabel value="Contraseña: "></h:outputLabel>
-			<h:inputSecret value=""></h:inputSecret>
+			<h:inputSecret value="#{coneccion.password}"></h:inputSecret>
 			
-			<h:commandButton value="Entrar"></h:commandButton>
+			<h:commandButton value="Entrar" action="#{coneccion.ingresar()}"></h:commandButton>
 			
 		</h:panelGrid>
 	</h:form>
