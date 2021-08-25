@@ -4,18 +4,18 @@
 	xmlns:p="http://primefaces.org/ui">
 
 <h:head>
-
+<h:outputStylesheet library="css" name="styles.css"></h:outputStylesheet>
 </h:head>
 
 
 <h:body>
 	<h:form id="formLogin">
 		<h:panelGrid columns="2">
-			<h:outputLabel value="Usuario: "></h:outputLabel>
-			<h:inputText value="#{coneccion.usuario}"></h:inputText>
+			<h:outputLabel id="txtusuario" value="Usuario:* "  styleClass="colorText"></h:outputLabel>
+			<h:inputText value="#{coneccion.usuario}" required="true" requiredMessage="El usuario es requerido"></h:inputText>
 			
-			<h:outputLabel value="Contraseña: "></h:outputLabel>
-			<h:inputSecret value="#{coneccion.password}"></h:inputSecret>
+			<h:outputLabel value="Contraseña:* " styleClass="colorText"></h:outputLabel>
+			<h:inputSecret id="txtpassword" value="#{coneccion.password}" required="true" requiredMessage="La contraseña es requerida"></h:inputSecret>
 			
 			<h:commandButton value="Entrar" action="#{coneccion.ingresar()}"></h:commandButton>
 			
