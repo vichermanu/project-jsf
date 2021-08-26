@@ -1,3 +1,27 @@
-.colorText{
+/*
+*Texto de etiqetas login
+*/
+.colorText {
 	color: green;
-	}
+}
+
+/*
+*ESTILOS DE LA TABLA
+*
+*Encabezado
+*/
+.headerTable {
+	text-align: center;
+	background: no-repeat scroll 0 0 #E5E5E5;
+	border-bottom: 1px solid #BBBBBB;
+	padding: 16px;
+}
+/*Filas de table*/
+.rowTable{
+	
+}
+
+.rowTableLine{
+	text-align: center;
+	background: none repeat scroll 0 0 #F9F9F9;
+	border-top: 1px solid #BBBBBB;}
